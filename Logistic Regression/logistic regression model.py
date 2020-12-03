@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 import random
-data=pd.read_csv('labeled_spotify_data_genre_clean_balanced.csv')
+data=pd.read_csv('data_wo_genre_balanced.csv')
 x=data.drop(columns=['Label'])
 x=x.astype('float')
 x=(x-x.min())/(x.max()-x.min())
@@ -18,7 +18,7 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42
 
 theta=[]
 theta_temp=[]
-for i in range(0,14):
+for i in range(0,x.shape[1]):
     theta.append(1)
 
 
