@@ -37,7 +37,7 @@ def gradient_descent(eta,x,y,theta):
     result=theta-third
     return result
 
-for k in range(0,200000):
+for k in range(0,50000):
     j=random.randint(0,x_train.shape[0]-1)
     theta=gradient_descent(0.00001,x_train.iloc[j],y_train.iloc[j],theta)
 print(theta)
