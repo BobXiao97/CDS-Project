@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from keras.layers import Dense,Dropout,Flatten
 from keras.models import Sequential
 data=pd.read_csv('dataset-of-10s.csv')
-x=data.drop(columns=['target','track','artist','uri'])
+x=data.drop(columns=['target','track','artist','uri','chorus_hit','sections'])
 x=x.astype('float')
 x=(x-x.min())/(x.max()-x.min())
 y=data['target']
@@ -34,3 +34,4 @@ model.fit(x_train,y_train,batch_size=10,epochs=20,validation_split=0.1)
 score,acc=model.evaluate(x_test, y_test,batch_size=10)
 print('Test score:',score)
 print('Test accuracy:',acc)
+model.save('Neural Network')
