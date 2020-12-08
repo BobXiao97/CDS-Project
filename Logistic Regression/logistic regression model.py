@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 import random
-data=pd.read_csv('data_wo_genre_balanced.csv')
+data=pd.read_csv('song_data_combined.csv')
 x=data.drop(columns=['Label'])
 x=x.astype('float')
 x=(x-x.min())/(x.max()-x.min())
