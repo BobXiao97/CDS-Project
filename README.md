@@ -5,6 +5,6 @@
 
 ## Acknowledgement:
 
-Our project modified and use of part of the data available on kaggle:
+Our project had made use of, and modified some part of the data available on kaggle:
 
 [https://www.kaggle.com/theoverman/the-spotify-hit-predictor-dataset?select=dataset-of-10s.csv](https://www.kaggle.com/theoverman/the-spotify-hit-predictor-dataset?select=dataset-of-10s.csv)
